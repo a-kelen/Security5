@@ -1,0 +1,10 @@
+C:\Users\Admin\source\repos\Security5\Security5\bin\Debug\Security5.exe.config
+C:\Users\Admin\source\repos\Security5\Security5\bin\Debug\Security5.exe
+C:\Users\Admin\source\repos\Security5\Security5\bin\Debug\Security5.pdb
+C:\Users\Admin\source\repos\Security5\Security5\obj\Debug\Security5.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\Security5\Security5\obj\Debug\Security5.Form1.resources
+C:\Users\Admin\source\repos\Security5\Security5\obj\Debug\Security5.Properties.Resources.resources
+C:\Users\Admin\source\repos\Security5\Security5\obj\Debug\Security5.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Security5\Security5\obj\Debug\Security5.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Security5\Security5\obj\Debug\Security5.exe
+C:\Users\Admin\source\repos\Security5\Security5\obj\Debug\Security5.pdb
