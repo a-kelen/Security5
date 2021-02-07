@@ -24,7 +24,7 @@ namespace Security5
         private void encrypt_Click(object sender, EventArgs e)
         {
             outText.Text = Cryptor.Encrypt(textBox.Text);
-            outText.Text +=  $"\n[{Cryptor.getHash()}]";
+            outText.Text +=  $"\n[{Cryptor.getHash(textBox.Text)}]";
         }
 
         private void openFile_Click(object sender, EventArgs e)

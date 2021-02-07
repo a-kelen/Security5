@@ -56,9 +56,13 @@ namespace Security5
 
             return res.ToString("D2");
         }
-        public int getHash()
+        public int getHash(string text)
         {
-            int sum = repl.Sum(x => x.Value);
+            int sum = 0;
+            foreach (var c in text)
+            {
+                sum += repl[c];
+            }
             return sum % repl.Count;
         }
     }
