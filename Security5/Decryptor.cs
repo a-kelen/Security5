@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Security5
 {
-    public class Cryptor
+    public class Decryptor
     {
+        public int D = 0;
+        public int n = 0;
         Dictionary<char, int> repl;
-        public int n = 33;
-        int E = 7;
-        public int D = 3;
-        public Cryptor()
+        public int Sum = 0;
+
+        public Decryptor()
         {
             repl = new Dictionary<char, int>();
             //for(int i=65; i <= 90; i++)
@@ -40,32 +40,25 @@ namespace Security5
             //repl.Add('\n', repl.Count + 1);
         }
 
-        public string Encrypt(string text)
+        public string Decrypt(string text)
         {
+            Sum = 0;
             string res = "";
-            foreach(var c in text)
+            for(int i = 0; i < text.Length; i+=2) 
             {
-                res += charEncrypt(c);
+                var temp = charDecrypt(string.Join("",text.Skip(i).Take(2)));
+                Sum += repl[temp];
+                res += temp;
             }
+            Sum = Sum % repl.Count;
             return res;
         }
 
-        string charEncrypt(char c)
+        char charDecrypt(string c)
         {
-            int v = repl[c];
-            var res = (int)(Math.Pow(v, E) % n);
-
-            return res.ToString("D2");
-        }
-        public string getHash(string text)
-        {
-            int sum = 0;
-            foreach (var c in text)
-            {
-                sum += repl[c];
-            }
-            var res = (int)(Math.Pow(sum % repl.Count, E) % n);
-            return res.ToString("D2"); ;
+            int v = int.Parse(c);
+            var res = (int)(Math.Pow(v, D) % n);
+            return repl.Where(x => x.Value == res).First().Key;
         }
     }
 }

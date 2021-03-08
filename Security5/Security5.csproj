@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cryptor.cs" />
+    <Compile Include="Decryptor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
